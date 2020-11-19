@@ -1,0 +1,17 @@
+Start and name a screen session:
+	• Screen -d -m -S $name
+
+Connect to screen session:
+	• Screen -r $name
+
+Connect to multi user screen session:
+	• Screen -x $name
+
+List screen sessions:
+	• Screen -ls
+
+Detach from an active session:
+	• Ctl-A, D
+
+Kill an active session:
+Ctl-A, K
