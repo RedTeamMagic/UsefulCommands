@@ -1,0 +1,5 @@
+Convert to pem
+Openssl pkcs12 -in EXPORT.PFX -nocerts -out nameof.key
+
+Convert to CRT
+Openssl pkcs12 -in EXPORT.PFX -clcerts -nokeys -out nameof.key
