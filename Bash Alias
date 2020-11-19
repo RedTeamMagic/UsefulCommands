@@ -1,0 +1,5 @@
+alias burp="/home/root/sectools/burpsuite/BurpSuitePro/./BurpSuitePro & firefox-esr"
+
+alias sharez="sudo vmhgfs-fuse .host:/sharez /home/root/Desktop/shares -o subtype=vmhgfs-fuse,allow_other"
+
+then run "source ~/.bashrc" to apply the changes without reboot
