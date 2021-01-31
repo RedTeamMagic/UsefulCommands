@@ -1,0 +1,2 @@
+Cut multiple whitespaces in a file
+tr -s " " < infile.txt
