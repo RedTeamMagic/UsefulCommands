@@ -1,1 +1,4 @@
 xfreerdp +clipboard /f /d:domain /u:username /p:passsword /v:x.x.x.x:port +toggle-fullscreen /drive:tsclient,/path/path/path
+
+Pass the hash
+/pth:[hash]
