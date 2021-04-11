@@ -10,5 +10,6 @@ MATCH (u:User {owned:true}), (c:Computer {unconstraineddelegation:true}), p=shor
 Find all computers configured for constrained delegation and what they're allowed to delegate to.
 MATCH (c:Computer), (t:Computer), p=((c)-[:AllowedToDelegate]->(t)) RETURN p
 
-
+This cypher query will show any domain users that have a SQLAdmin edge to MSSQL Servers.
+MATCH p=(u:User)-[:SQLAdmin]->(c:Computer) RETURN p
 
