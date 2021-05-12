@@ -1,0 +1,2 @@
+wget https://x.x.x.x/dana-cached/hc/HostCheckerInstaller.osx --no-check-certificate
+cat HostCheckerInstaller.osx | grep -a "<key>version</key>" -A 1 
