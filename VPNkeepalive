@@ -1,0 +1,3 @@
+watch -n 10 netstat -i		
+Make sure all traffic went through vpn.  
+Copy/Paste below is the total traffic during the assessment and reflects scans and some browser searches.
