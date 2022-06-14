@@ -1,1 +1,1 @@
-wget -E -H -k -K -p -e robots=off https://www.website.com --no-certificate-check
+wget -E -H -k -K -p -e robots=off https://www.website.com --no-check-certificate
